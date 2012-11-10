@@ -1,0 +1,579 @@
+// WDGTranslateClient.txt
+//
+// == Format =============================================================
+//
+// Only comments recognized are lines prefixed with '//'. Indented
+// and trailing comments are not supported.
+//
+// Each translation is a set of two lines, the earlier being the
+// original text (CP949, EUC-KR is fine too; UNICODE/UTF-8 is not)
+// and the latter being the translation to place into the client.
+//
+// The length of the translation is limited to the length of the
+// original string plus 1 aligned to be multiple of 4, minus 1.
+//
+// Example:
+// - "asdf" = 4 +1 (zero termination of the string) = 5
+// - Next multiple of 4 for 5 is 8 (2x4)
+// - 8 -1 = 7 characters usable for translation string
+//
+// Lines to look for start with 'F:', lines with replacement string
+// start with 'R:'. The line syntax is the same as the one used for
+// matches within the plugins. That is, literal strings are enclosed
+// in ' everything else is interpreted as hexadecimal bytes.
+//
+// Example:
+// |   // Bytes can be separated by spaces...
+// |   F:C4 C9 B8 AF C5 CD 20 B8 B8 B5 E9 B1 E2
+// |   R:'Make Character'
+// |
+// |   // ...but do not need to.
+// |   F:28C4B3B8AFC5CD2FC3D120BDBDB7D429
+// |   R:'(Used / Total)'
+//
+// Do not use byte 00 at the end of strings, as it is appended auto-
+// magically. Do not use it within strings either, unless you have a
+// really good reason to do so.
+//
+// Partial strings are not matched, the original string is always
+// assumed to be complete. Since mismatches are still likely to
+// occur for shorter strings, place longer strings at the beginning
+// and the short ones and the end of the file.
+//
+// == Topic ==============================================================
+// http://rathena.org/board/topic/71122-project-2012-client-translation
+// Thanks to @nanakiwurtz
+//
+// == Changelog ==========================================================
+//
+// -- r3 --
+// First release.                                     [Ai4rei/Shinryo]
+//
+// -- r4 --
+// ADD: 12 translations.                                      [Swadon]
+//
+// -- r5 --
+// FIX: 2 errors due to the length of the replacement string. [Swadon]
+// ADD: Topic link above.
+//
+// -- r6 --
+// ADD: 2 translations.                                     [ossi0110]
+// FIX: 3 mistakes.
+//
+// -- r7 --
+// FIX: - 10 elements,
+//        3 translations about searching for mob.           [ossi0110]
+// ADD: - Credits to @nanakiwurtz for monster elements,
+//        monster sizes, monster races and monster types,
+//        and to @TrueNoir.
+//      - Who fixed an entry (if it was fixed).
+//      - Revision for each entry.
+//      - Header for some entries.                            [Swadon]
+//
+// =======================================================================
+
+// Translate Delete Time
+// Revision: 3
+F:2564BFF9202564C0CF202564BDC3202564BAD0202564C3CA
+R:'Delete: %d/%d - %d:%d:%d'
+
+F:2564B3E2202564BFF9202564C0CF202564BDC3202564BAD0202564C3CA20
+R:'%d/%d/%d - %d:%d:%d'
+
+// Translate Message Box
+// Revision: 3
+F:B8DEBDC3C1F6
+R:'Message'
+
+// Translate Character Slot Usage
+// Revision: 3
+F:28C4B3B8AFC5CD2FC3D120BDBDB7D429
+R:'(Used / Total)'
+
+// Translate Make Character Window Title
+// Revision: 3
+F:C4C9B8AFC5CD20B8B8B5E9B1E2
+R:'Make Character'
+
+// Navigation Window (Type anything here)
+// Revision: 3
+F:B0CBBBF620B4DCBEEE20BCB3C1A4202845783A20B4DCBEEE20B4DCBEEE202E2E2E
+R:'Type anything here'
+
+// Navigation Window (Find)
+// Revision: 3
+F:B0CBBBF6
+R:'Find'
+
+// Navigation Window (Back to navigation)
+// Revision: 3
+F:B1E620C1A4BAB800B8F1C7A5B7CE20BEC8B3BB
+R:'Back to Navigation'
+
+// Navigation Window (View List)
+// Revision: 3
+F:B0CBBBF620C1A4BAB8
+R:'View List'
+
+// Navigation Window (Toggle Minimap)
+// Revision: 3
+F:BAB8B1E220B8F0B5E520BAAFB0E6
+R:'Toggle Minimap'
+
+// Video Configuration (More)
+// Revision: 3
+F:C0FCC0E5
+R:'More'
+
+// Sound Configuration
+// Revision: 3
+F:C0FCC0E5
+R:'More'
+
+// Contributor: @nanakiwurtz
+// Fixed: @ossi0110
+// Location: Monster Element -> Shadow.
+// Find: ¼ö¼Ó¼º%d [BCF6BCD3BCBA2564]
+// Replacement: Shdw [53686477]
+// Revision: 7
+F:BCF6BCD3BCBA2564
+R:'Shdw'
+
+// Contributor: @nanakiwurtz
+// Fixed: @ossi0110
+// Location: Monster Element -> Earth.
+// Find: Áö¼Ó¼º%d [C1F6BCD3BCBA2564]
+// Replacement: Earth [4561727468]
+// Revision: 7
+F:C1F6BCD3BCBA2564
+R:'Earth'
+
+// Contributor: @nanakiwurtz
+// Fixed: @ossi0110
+// Location: Monster Element -> Water.
+// Find: ¾Ï¼Ó¼º%d [BECFBCD3BCBA2564]
+// Replacement: Water [5761746572]
+// Revision: 7
+F:BECFBCD3BCBA2564
+R:'Water'
+
+// Contributor: @nanakiwurtz
+// Fixed: @ossi0110
+// Location: Monster Element -> Fire.
+// Find: È­¼Ó¼º%d [C8ADBCD3BCBA2564]
+// Replacement: Fire [46697265]
+// Revision: 7
+F:C8ADBCD3BCBA2564
+R:'Fire'
+
+// Contributor: @nanakiwurtz
+// Fixed: @ossi0110
+// Location: Monster Element -> Ghost.
+// Find: ¿°¼Ó¼º%d [BFB0BCD3BCBA2564]
+// Replacement: Ghost [47686F7374]
+// Revision: 7
+F:BFB0BCD3BCBA2564
+R:'Ghost'
+
+// Contributor: @nanakiwurtz
+// Fixed: @ossi0110
+// Location: Monster Element -> Wind.
+// Find: Ç³¼Ó¼º%d [C7B3BCD3BCBA2564]
+// Replacement: Wind [57696E64]
+// Revision: 7
+F:C7B3BCD3BCBA2564
+R:'Wind'
+
+// Contributor: @nanakiwurtz
+// Fixed: @ossi0110
+// Location: Monster Element -> Pois.
+// Find: µ¶¼Ó¼º%d [B5B6BCD3BCBA2564]
+// Replacement: Pois [506F6973]
+// Revision: 7
+F:B5B6BCD3BCBA2564
+R:'Pois'
+
+// Contributor: @nanakiwurtz
+// Fixed: @ossi0110
+// Location: Monster Element -> Holy.
+// Find: ¼º¼Ó¼º%d [BCBABCD3BCBA2564]
+// Replacement: Holy [486F6C79]
+// Revision: 7
+F:BCBABCD3BCBA2564
+R:'Holy'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Element -> Undead.
+// Find: ¾ðµ¥µå [BEF0B5A5B5E5]
+// Replacement: Und [556E64]
+// Revision: 3
+F:BEF0B5A5B5E5
+R:'Und'
+
+// Contributor: @nanakiwurtz
+// Fixed: @ossi0110
+// Location: Monster Element -> Neutral.
+// Find: ¹«¼Ó¼º%d [B9ABBCD3BCBA2564]
+// Replacement: Neutr [4E65757472]
+// Revision: 7
+F:B9ABBCD3BCBA2564
+R:'Neutr'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Size -> Big.
+// Find: ´ëÇü [B4EBC7FC]
+// Replacement: Big [426967]
+// Revision: 3
+F:B4EBC7FC
+R:'Big'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Size -> Medium.
+// Find: ÁßÇü [C1DFC7FC]
+// Replacement: Med [4D6564]
+// Revision: 3
+F:C1DFC7FC
+R:'Med'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Size -> Small.
+// Find: ¼ÒÇü [BCD2C7FC]
+// Replacement: Smal [536D616C]
+// Note: Actually it should be Large, but since it's limited to 4 char only, so I pick Big/LRG.
+// Revision: 3
+F:BCD2C7FC
+R:'Smal'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Race -> Demon.
+// Find: ¾Ç¸¶Çü [BEC7B8B6C7FC]
+// Replacement: Demon [44656D6F6E]
+// Revision: 3
+F:BEC7B8B6C7FC
+R:'Demon'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Race -> Demi-H.
+// Find: ÀÎ°£Çü [C0CEB0A3C7FC]
+// Replacement: Demi-H [44656D692D48]
+// Revision: 3
+F:C0CEB0A3C7FC
+R:'Demi-H'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Race -> Form.
+// Find: ¹«Çü [B9ABC7FC]
+// Replacement: Form [466F726D]
+// Revision: 3
+F:B9ABC7FC
+R:'Form'
+
+// Contributor: @nanakiwurtz
+// Fixed: @ossi0110
+// Location: Monster Race -> Undead.
+// Find: ¾ðµ¥µå%d [BEF0B5A5B5E52564]
+// Replacement: Undead [556E64656164]
+// Revision: 7
+F:BEF0B5A5B5E52564
+R:'Undead'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Race -> Plant.
+// Find: ½Ä¹°Çü [BDC4B9B0C7FC]
+// Replacement: Plant [506C616E74]
+// Revision: 3
+F:BDC4B9B0C7FC
+R:'Plant'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Race -> Fish.
+// Find: ¾îÆÐÇü [BEEEC6D0C7FC]
+// Replacement: Fish [46697368]
+// Revision: 3
+F:BEEEC6D0C7FC
+R:'Fish'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Race -> Brute.
+// Find: µ¿¹°Çü [B5BFB9B0C7FC]
+// Replacement: Brute [4272757465]
+// Revision: 3
+F:B5BFB9B0C7FC
+R:'Brute'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Race -> Angel.
+// Find: Ãµ»çÇü [C3B5BBE7C7FC]
+// Replacement: Angel [416E67656C]
+// Revision: 3
+F:C3B5BBE7C7FC
+R:'Angel'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Race -> Insect.
+// Find: °ïÃæÇü [B0EFC3E6C7FC]
+// Replacement: Drag [496E73656374]
+// Revision: 3
+F:B0EFC3E6C7FC
+R:'Insect'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Race -> Drag.
+// Find: ¿ëÁ· [BFEBC1B7]
+// Replacement: Drag [44726167]
+// Revision: 3
+F:BFEBC1B7
+R:'Drag'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Type -> Mob.
+// Find: (ÀÏ¹Ý) [28C0CFB9DD29]
+// Replacement: (Mob) [284D6F6229]
+// Revision: 3
+F:28C0CFB9DD29
+R:'(Mob)'
+
+// Contributor: @nanakiwurtz
+// Location: Monster Type -> Boss.
+// Find: (º¸½º) [28BAB8BDBA29]
+// Replacement: (Boss) [28426F737329]
+// Revision: 3
+F:28BAB8BDBA29
+R:'(Boss)'
+
+// Contributor: @TrueNoir
+// Location: Navigation -> Chat info.
+// Find: ¾È³»ÇÏ´Â À§Ä¡·Î ÀÌµ¿ÇÏ½Ã±â ¹Ù¶ø´Ï´Ù. [BEC8B3BBC7CFB4C220C0A7C4A1B7CE20C0CCB5BFC7CFBDC3B1E220B9D9B6F8B4CFB4D92E]
+// Replacement: To find the location, please go to [546F2066696E6420746865206C6F636174696F6E2C20706C6561736520676F20746F]
+// Revision: 3
+F:BEC8B3BBC7CFB4C220C0A7C4A1B7CE20C0CCB5BFC7CFBDC3B1E220B9D9B6F8B4CFB4D92E
+R:'To find the location, please go to'
+
+// Contributor: @TrueNoir
+// Location: Navigation -> Chat info.
+// Find: ¿öÇÁ¸¦ ÀÌ¿ëÇÏ¿© ´ÙÀ½ Áö¿ªÀ¸·Î ÀÌµ¿ÇÏ½Ã±â ¹Ù¶ø´Ï´Ù. [BFF6C7C1B8A620C0CCBFEBC7CFBFA920B4D9C0BD20C1F6BFAAC0B8B7CE20C0CCB5BFC7CFBDC3B1E220B9D9B6F8B4CFB4D92E]
+// Replacement: Using the warp to the next area, please click to go [5573696E6720746865207761727020746F20746865206E65787420617265612C20706C6561736520636C69636B20746F20676F]
+// Revision: 3
+F:BFF6C7C1B8A620C0CCBFEBC7CFBFA920B4D9C0BD20C1F6BFAAC0B8B7CE20C0CCB5BFC7CFBDC3B1E220B9D9B6F8B4CFB4D92E
+R:'Using the warp to the next area, please click to go'
+
+// Contributor: @TrueNoir
+// Location: Navigation -> Chat info.
+// Find: ¸ñÇ¥ ¸Ê¿¡ µµÂøÇÏ¿´½À´Ï´Ù. [B8F1C7A520B8CABFA120B5B5C2F8C7CFBFB4BDC0B4CFB4D92E]
+// Replacement: Arrived at the target map [417272697665642061742074686520746172676574206D6170]
+// Revision: 3
+F:B8F1C7A520B8CABFA120B5B5C2F8C7CFBFB4BDC0B4CFB4D92E
+R:'Arrived at the target map'
+
+// Contributor: @TrueNoir
+// Location: Navigation -> Chat info.
+// Find: Ã£°íÀÚ ÇÏ´Â Npc°¡ ÀÖ´Â ¸Ê¿¡ µµÂø ÇÏ¿´½À´Ï´Ù. Npc·Î ÀÌµ¿ÇÏ½Ã±â ¹Ù¶ø´Ï´Ù. [C3A3B0EDC0DA20C7CFB4C2204E7063B0A120C0D6B4C220B8CABFA120B5B5C2F820C7CFBFB4BDC0B4CFB4D92E204E7063B7CE20C0CCB5BFC7CFBDC3B1E220B9D9B6F8B4CFB4D92E]
+// Replacement: Arrived on the map that has the Npc your looking for. Go to that NPC [41727269766564206F6E20746865206D617020746861742068617320746865204E706320796F7572206C6F6F6B696E6720666F722E20476F20746F2074686174204E5043]
+// Revision: 3
+F:C3A3B0EDC0DA20C7CFB4C2204E7063B0A120C0D6B4C220B8CABFA120B5B5C2F820C7CFBFB4BDC0B4CFB4D92E204E7063B7CE20C0CCB5BFC7CFBDC3B1E220B9D9B6F8B4CFB4D92E
+R:'Arrived on the map that has the Npc your looking for. Go to that NPC'
+
+// Contributor: @TrueNoir
+// Location: Navigation.
+// Find: µµÂø ÁöÁ¡¿¡ ´ëÇÑ Á¤º¸ ¼³Á¤ ½ÇÆÐ [B5B5C2F820C1F6C1A1BFA120B4EBC7D120C1A4BAB820BCB3C1A420BDC7C6D0]
+// Replacement: Failed to set info for location [4661696C656420746F2073657420696E666F20666F72206C6F636174696F6E]
+// Revision: 3
+F:B5B5C2F820C1F6C1A1BFA120B4EBC7D120C1A4BAB820BCB3C1A420BDC7C6D0
+R:'Failed to set info for location'
+
+// Contributor: @TrueNoir
+// Location: Navigation.
+// Find: ¸ñÇ¥¸¦ ÁöÁ¤ ÇÏ½Ã±â ¹Ù¶ø´Ï´Ù [B8F1C7A5B8A620C1F6C1A420C7CFBDC3B1E220B9D9B6F8B4CFB4D9]
+// Replacement: Please specify target goals [506C6561736520737065636966792074617267657420676F616C73]
+// Revision: 3
+F:B8F1C7A5B8A620C1F6C1A420C7CFBDC3B1E220B9D9B6F8B4CFB4D9
+R:'Please specify target goals'
+
+// Contributor: @TrueNoir
+// Location: Navigation.
+// Find: ±æ ¾È³»°¡ ½ÃÀÛ µÇ¾ú½À´Ï´Ù [B1E620BEC8B3BBB0A120BDC3C0DB20B5C7BEFABDC0B4CFB4D9]
+// Replacement: Directions were started [446972656374696F6E7320776572652073746172746564]
+// Revision: 3
+F:B1E620BEC8B3BBB0A120BDC3C0DB20B5C7BEFABDC0B4CFB4D9
+R:'Directions were started'
+
+// Contributor: @TrueNoir
+// Location: Navigation -> Monster.
+// Find: Ã£°íÀÚ ÇÏ´Â ¸ó½ºÅÍ°¡ ÀÖ´Â ¸Ê ÀÔ´Ï´Ù. [C3A3B0EDC0DA20C7CFB4C220B8F3BDBAC5CDB0A120C0D6B4C220B8CA20C0D4B4CFB4D92E]
+// Replacement: Is the map that your looking for mob [497320746865206D6170207468617420796F7572206C6F6F6B696E6720666F72206D6F62]
+// Note: I add '2E' at the end of the string to find because it was too short compared to the string replacement (1 char)
+// Revision: 3
+F:C3A3B0EDC0DA20C7CFB4C220B8F3BDBAC5CDB0A120C0D6B4C220B8CA20C0D4B4CFB4D92E
+R:'Is the map that your looking for mob'
+
+// Contributor: @TrueNoir
+// Location: Navigation.
+// Find: ºñ°øÁ¤À¸·Î ÀÌµ¿ ÇÏ½Ã±â ¹Ù¶ø´Ï´Ù [BAF1B0F8C1A4C0B8B7CE20C0CCB5BF20C7CFBDC3B1E220B9D9B6F8B4CFB4D9]
+// Replacement: Please go to the airship [506C6561736520676F20746F207468652061697273686970]
+// Revision: 3
+F:BAF1B0F8C1A4C0B8B7CE20C0CCB5BF20C7CFBDC3B1E220B9D9B6F8B4CFB4D9
+R:'Please go to the airship'
+
+// Contributor: @TrueNoir
+// Location: Navigation.
+// Find: ¸Ê(%s)À¸·Î ÀÌµ¿ÇÏ½Ã±â ¹Ù¶ø´Ï´Ù [B8CA28257329C0B8B7CE20C0CCB5BFC7CFBDC3B1E220B9D9B6F8B4CFB4D9]
+// Replacement: (%s) map, please move to [28257329206D61702C20706C65617365206D6F766520746F]
+// Revision: 3
+F:B8CA28257329C0B8B7CE20C0CCB5BFC7CFBDC3B1E220B9D9B6F8B4CFB4D9
+R:'(%s) map, please move to'
+
+// Contributor: @TrueNoir
+// Location: Navigation.
+// Find: ¾È³»ÇÏ´Â %s(À»)¸¦ ÀÌ¿ëÇÏ¿© [BEC8B3BBC7CFB4C220257328C0BB29B8A620C0CCBFEBC7CFBFA9]
+// Replacement: Guidance to %s (A) By using [47756964616E636520746F20257320284129204279207573696E67]
+// Revision: 3
+F:BEC8B3BBC7CFB4C220257328C0BB29B8A620C0CCBFEBC7CFBFA9
+R:'Guidance to %s (A) By using'
+
+// Contributor: @nanakiwurtz
+// Location: Navigation -> Search a map -> Click Navigation button -> Close Navigation window
+// Find: ¾È³»Áß ÀÔ´Ï´Ù! Á¾·á ÇÏ½Ã°Ú½À´Ï±î? [BEC8B3BBC1DF20C0D4B4CFB4D92120C1BEB7E120C7CFBDC3B0DABDC0B4CFB1EE3F]
+// Replacement: Do you want to cancel navigation? [557365205363726F6C6C203F]
+// Revision: 3
+F:BEC8B3BBC1DF20C0D4B4CFB4D92120C1BEB7E120C7CFBDC3B0DABDC0B4CFB1EE3F
+R:'Do you want to cancel navigation?'
+
+// Contributor: @nanakiwurtz
+// Fixed: @ossi0110
+// Location: Navigation -> Teleport Scrolls from the Cash Shop.
+// Find: ´øÀüÀÌµ¿ ½ºÅ©·Ñ »ç¿ë Àû¿ë [B4F8C0FCC0CCB5BF20BDBAC5A9B7D120BBE7BFEB20C0FBBFEB]
+// Replacement: Use Scroll ? [557365205363726F6C6C203F]
+// Revision: 6
+F:B4F8C0FCC0CCB5BF20BDBAC5A9B7D120BBE7BFEB20C0FBBFEB
+R:'Use Scroll ?'
+
+// Contributor: @nanakiwurtz
+// Fixed: @ossi0110
+// Location: Navigation -> Kafra Warp.
+// Find: À§Ä¡ ÀÌµ¿ ¼­ºñ½º Çã¿ë [C0A7C4A120C0CCB5BF20BCADBAF1BDBA20C7E3BFEB]
+// Replacement: Use Kafra Warp ? [557365204B616672612057617270203F]
+// Revision: 6
+F:C0A7C4A120C0CCB5BF20BCADBAF1BDBA20C7E3BFEB
+R:'Use Kafra Warp ?'
+
+// Contributor: @nanakiwurtz
+// Fixed: @ossi0110
+// Location: Navigation -> Airship.
+// Find: ºñ°øÁ¤ ÀÌµ¿ Àû¿ë [BAF1B0F8C1A420C0CCB5BF20C0FBBFEB]
+// Replacement: Use Airship ? [5573652041697273686970203F]
+// Revision: 6
+F:BAF1B0F8C1A420C0CCB5BF20C0FBBFEB
+R:'Use Airship ?'
+
+// Contributor: @nanakiwurtz
+// Location: Navigation -> After NPC has been reached.
+// Find: µµÂø. [B5B5C2F82E]
+// Replacement: Found [466F756E64]
+// Revision: 4
+F:B5B5C2F82E
+R:466F756E64
+
+// Contributor: @nanakiwurtz
+// Location: World Map -> Character's Location.
+// Find: ¡Ú [A1DA]
+// Replacement: You [596F75]
+// Note: I add '00' because there is many results for 'A1DA'.
+// Revision: 4
+F:A1DA00
+R:596F75
+
+// Contributors: @gaga / @TrueNoir
+// Location: Navigation -> Start to search an npc.
+// Find: ±æ Ã£±â ½ÇÆÐ [B1E620C3A3B1E220BDC7C6D0]
+// Replacement: Path Failure [50617468204661696C757265]
+// Revision: 4
+F:B1E620C3A3B1E220BDC7C6D0
+R:'Path Failure'
+
+// Contributor: @TrueNoir
+// Location: Navigation.
+// Find: ÇØ´ç ¸ÊÀº ±æÃ£±â°¡ Áö¿ø µÇÁö ¾Ê´Â ¸ÊÀÔ´Ï´Ù..ÇöÀç ¸Ê ÀÌµ¿ °æ·Î Ã£±â ½ÇÆÐ.ÇÃ·¹ÀÌ¾î À§Ä¡ Ã£±â ½ÇÆÐ [5061746866696E64696E6720646F6573206E6F7420737570706F72742074686973206D61702E204661696C656420746F2066696E64207061746820746F206D6F76652066726F6D2063757272656E74206C6F636174696F6E2E]
+// Replacement: Pathfinding does not support this map. Failed to find path to move from current location. [5061746866696E64696E6720646F6573206E6F7420737570706F72742074686973206D61702E204661696C656420746F2066696E64207061746820746F206D6F76652066726F6D2063757272656E74206C6F636174696F6E2E]
+// Revision: 4
+F:5061746866696E64696E6720646F6573206E6F7420737570706F72742074686973206D61702E204661696C656420746F2066696E64207061746820746F206D6F76652066726F6D2063757272656E74206C6F636174696F6E2E
+R:'Pathfinding does not support this map. Failed to find path to move from current location.'
+
+// Contributor: @ossi0110
+// Location: Navigation Window.
+// Find: ======= ±æ ¾È³» Á¤º¸ ======= [3D3D3D3D3D3D3D20B1E620BEC8B3BB20C1A4BAB8203D3D3D3D3D3D3D]
+// Replacement: ======= Guidance ======= [3D3D3D3D3D3D3D2047756964616E6365203D3D3D3D3D3D3D]
+// Revision: 4
+F:3D3D3D3D3D3D3D20B1E620BEC8B3BB20C1A4BAB8203D3D3D3D3D3D3D
+R:'======= Guidance ======='
+
+// Contributor/Fixed: @ossi0110
+// Location: Unknown.
+// Find: ¸ñÇ¥   : %s(%s)ÀÏ¹Ý [B8F1C7A52020203A2025732825732900C0CFB9DD00000000]
+// Replacement: Goal   : %s(%s)General [476F616C2020203A2025732825732947656E6572616C]
+// Revision: 7
+F:B8F1C7A52020203A2025732825732900C0CFB9DD00000000
+R:'Goal   : %s(%s)General'
+
+// Contributor/Fixed: @ossi0110
+// Location: Unknown.
+// Find: ¸ñÇ¥   : [B8F1C7A52020203A]
+// Replacement: Goal : [25732825732947656E6572616C]
+// Revision: 4
+F:B8F1C7A52020203A
+R:'Goal :'
+
+// Contributor/Fixed: @ossi0110
+// Location: Unknown.
+// Find: ¸ñÇ¥¸Ê: %s(%s) [B8F1C7A5B8CA3A20257328257329]
+// Replacement: Coords %s(%s) [436F6F72647320257328257329]
+// Revision: 7
+F:B8F1C7A5B8CA3A20257328257329
+R:'Coords %s(%s)'
+
+// Contributor: @ossi0110
+// Location: Unknown.
+// Find: ======== °á°ú Á¤º¸ ========== [3D3D3D3D3D3D3D3D20B0E1B0FA20C1A4BAB8203D3D3D3D3D3D3D3D3D3D]
+// Replacement: ======== Results ========== [3D3D3D3D3D3D3D3D20526573756C7473203D3D3D3D3D3D3D3D3D3D]
+// Revision: 4
+F:3D3D3D3D3D3D3D3D20B0E1B0FA20C1A4BAB8203D3D3D3D3D3D3D3D3D3D
+R:'======== Results =========='
+
+// Contributor/Fixed: @ossi0110
+// Location: Unknown.
+// Find: °Å¸®   : %d Sell %d WarpMove [B0C5B8AE2020203A2025642053656C6C20256420576172704D6F7665]
+// Replacement: Dist  %d Cell %d WarpMove [44697374202025642043656C6C20256420576172704D6F7665]
+// Revision: 7
+F:B0C5B8AE2020203A2025642053656C6C20256420576172704D6F7665
+R:'Dist  %d Cell %d WarpMove'
+
+// Contributor: @ossi0110
+// Location: Unknown.
+// Find: == °Ë»ö °á°ú(%d)== [003D3D20B0CBBBF620B0E1B0FA282564293D3D]
+// Replacement: == Found (%d) == [3D3D20466F756E642028256429203D3D]
+// Revision: 4
+F:003D3D20B0CBBBF620B0E1B0FA282564293D3D
+R:'== Found (%d) =='
+
+// Contributor: @Swadon
+// Location: Navigation -> When you click on a minimap icon.
+// Find: °¡¸®Å°´Â ¹æÇâÀ¸·Î °¡½Ã±â ¹Ù¶ø´Ï´Ù. [B0A1B8AEC5B0B4C220B9E6C7E2C0B8B7CE20B0A1BDC3B1E220B9D9B6F8B4CFB4D92E]
+// Replacement: Follow the direction indicated. [466F6C6C6F772074686520646972656374696F6E20696E646963617465642E]
+// Revision: 4
+F:B0A1B8AEC5B0B4C220B9E6C7E2C0B8B7CE20B0A1BDC3B1E220B9D9B6F8B4CFB4D92E
+R:'Follow the direction indicated.'
+
+// Contributor: @ossi0110
+// Location: Navigation -> Minimize Window.
+// Find: << °Ë»öÁß... >> [3C3C20B0CBBBF6C1DF2E2E2E203E3E]
+// Replacement: << Goal... >> [3C3C20476F616C2E2E2E203E3E]
+// Revision: 6
+F:3C3C20B0CBBBF6C1DF2E2E2E203E3E
+R:'<< Goal... >>'
+
+// Contributor: @ossi0110
+// Location: Minimap -> Click on an icon for example Smith, he will pop up the navigation window.
+// Find: ¸ñÇ¥: (%d, %d) [B8F1C7A53A202825642C20256429]
+// Replacement: Goal: (%d, %d) [476F616C3A202825642C20256429]
+// Revision: 6
+F:B8F1C7A53A202825642C20256429
+R:'Goal: (%d, %d)'
