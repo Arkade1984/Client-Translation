@@ -42,7 +42,7 @@
 //
 // == Topic ==============================================================
 // http://rathena.org/board/topic/71122-project-2012-client-translation
-// Thanks to @nanakiwurtz
+// Thanks to @nanakiwurtz.
 //
 // == Changelog ==========================================================
 //
@@ -69,6 +69,9 @@
 //      - Who fixed an entry (if it was fixed).
 //      - Header for some entries.                            [Swadon]
 //
+// -- v1.5 --
+// FIX: - 2 translations.                                 [Alexandria]
+//
 // =======================================================================
 
 // Translate Delete Time
@@ -90,9 +93,12 @@ R:'(Used / Total)'
 F:C4C9B8AFC5CD20B8B8B5E9B1E2
 R:'Make Character'
 
-// Navigation Window (Type anything here)
+// Contributor: @Alexandria
+// Location: Navigation Window.
+// Find: °Ë»ö ´Ü¾î ¼³Á¤ (Ex: ´Ü¾î ´Ü¾î ... [B0CBBBF620B4DCBEEE20BCB3C1A4202845783A20B4DCBEEE20B4DCBEEE202E2E2E]
+// Replacement: Enter search string... [456E7465722053656172636820537472696E672E2E2E]
 F:B0CBBBF620B4DCBEEE20BCB3C1A4202845783A20B4DCBEEE20B4DCBEEE202E2E2E
-R:'Type anything here'
+R:'Enter search string...'
 
 // Navigation Window (Find)
 F:B0CBBBF6
@@ -491,12 +497,12 @@ R:'Dist  %d Cell %d WarpMove'
 F:003D3D20B0CBBBF620B0E1B0FA282564293D3D
 R:'== Found (%d) =='
 
-// Contributor: @Swadon
+// Contributor: @Swadon/@Alexandria
 // Location: Navigation -> When you click on a minimap icon.
 // Find: °¡¸®Å°´Â ¹æÇâÀ¸·Î °¡½Ã±â ¹Ù¶ø´Ï´Ù. [B0A1B8AEC5B0B4C220B9E6C7E2C0B8B7CE20B0A1BDC3B1E220B9D9B6F8B4CFB4D92E]
 // Replacement: Follow the direction indicated. [466F6C6C6F772074686520646972656374696F6E20696E646963617465642E]
 F:B0A1B8AEC5B0B4C220B9E6C7E2C0B8B7CE20B0A1BDC3B1E220B9D9B6F8B4CFB4D92E
-R:'Follow the direction indicated.'
+R:'Please go to indicated direction.'
 
 // Contributor: @ossi0110
 // Location: Navigation -> Minimize Window.
