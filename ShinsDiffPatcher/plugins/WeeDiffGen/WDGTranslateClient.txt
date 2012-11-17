@@ -72,6 +72,9 @@
 // -- v1.5 --
 // FIX: - 2 translations.                                 [Alexandria]
 //
+// -- 1.6 --
+// FIX: - 2 elements (Water and Shadow swapped)          [nanakiwurtz]
+//
 // =======================================================================
 
 // Translate Delete Time
@@ -125,12 +128,12 @@ F:C0FCC0E5
 R:'More'
 
 // Contributor: @nanakiwurtz
-// Fixed: @ossi0110
-// Location: Monster Element -> Shadow.
+// Fixed: @ossi0110/@nanakiwurtz
+// Location: Monster Element -> Water.
 // Find: ¼ö¼Ó¼º%d [BCF6BCD3BCBA2564]
 // Replacement: Shdw [53686477]
 F:BCF6BCD3BCBA2564
-R:'Shdw'
+R:'Water'
 
 // Contributor: @nanakiwurtz
 // Fixed: @ossi0110
@@ -141,12 +144,12 @@ F:C1F6BCD3BCBA2564
 R:'Earth'
 
 // Contributor: @nanakiwurtz
-// Fixed: @ossi0110
-// Location: Monster Element -> Water.
+// Fixed: @ossi0110/@nanakiwurtz
+// Location: Monster Element -> Shadow.
 // Find: ¾Ï¼Ó¼º%d [BECFBCD3BCBA2564]
 // Replacement: Water [5761746572]
 F:BECFBCD3BCBA2564
-R:'Water'
+R:'Shdw'
 
 // Contributor: @nanakiwurtz
 // Fixed: @ossi0110
