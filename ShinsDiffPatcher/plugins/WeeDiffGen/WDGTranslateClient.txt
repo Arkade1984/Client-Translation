@@ -520,3 +520,82 @@ R:'<< Goal... >>'
 // Replacement: Goal: (%d, %d) [476F616C3A202825642C20256429]
 F:B8F1C7A53A202825642C20256429
 R:'Goal: (%d, %d)'
+
+// Contributor: @Dastgir Pojee
+//F:Navigation >: ¸Ê(%s)À» ¼±ÅÃÇÏ¿© ÀÌµ¿ ÇÏ½Ã±â ¹Ù¶ø´Ï´Ù
+//R:Navigation >:Map(%s)Please Follow the Directions    
+F: 4E 61 76 69 67 61 74 69 6F 6E 20 3E 3A 20 B8 CA 28 25 73 29 C0 BB 20 BC B1 C5 C3 C7 CF BF A9 20 C0 CC B5 BF 20 C7 CF BD C3 B1 E2 20 B9 D9 B6 F8 B4 CF B4 D9
+R: 4E 61 76 69 67 61 74 69 6F 6E 20 3E 3A 4D 61 70 28 25 73 29 50 6C 65 61 73 65 20 46 6F 6C 6C 6F 77 20 74 68 65 20 44 69 72 65 63 74 69 6F 6E 73 20 20 20 20
+
+// Contributor: @Dastgir Pojee
+//F:¸ñÇ¥¸¦ ÁöÁ¤ ÇÏ½Ã±â ¹Ù¶ø´Ï´Ù
+//R:Please Specify Destination..
+F:B8 F1 C7 A5 B8 A6 20 C1 F6 C1 A4 20 C7 CF BD C3 B1 E2 20 B9 D9 B6 F8 B4 CF B4 D9 2E
+R:50 6C 65 61 73 65 20 53 70 65 63 69 66 79 20 44 65 73 74 69 6E 61 74 69 6F 6E 2E 2E
+
+// Contributor: @Dastgir Pojee
+//F:µµÂø ÁöÁ¡¿¡ ´ëÇÑ Á¤º¸ ¼³Á¤ ½ÇÆÐ!
+//R:Cannot Give the Destination Info
+F:B5 B5 C2 F8 20 C1 F6 C1 A1 BF A1 20 B4 EB C7 D1 20 C1 A4 BA B8 20 BC B3 C1 A4 20 BD C7 C6 D0 21
+R:43 61 6E 6E 6F 74 20 47 69 76 65 20 74 68 65 20 44 65 73 74 69 6E 61 74 69 6F 6E 20 49 6E 66 6F
+
+// Contributor: @Dastgir Pojee
+//F:<< ¾È³»Áß >>
+//R:<<Guidance>>
+F:3C 3C 20 BE C8 B3 BB C1 DF 20 3E 3E
+R:3C 3C 47 75 69 64 61 6E 63 65 3E 3E
+
+// Contributor: @Dastgir Pojee
+//F:>> ¸ñÇ¥ Á¤º¸¸¦ ÀÐÁö ¸øÇÔ!
+//R:>> Failed to Read Info..!
+F:3E 3E 20 B8 F1 C7 A5 20 C1 A4 BA B8 B8 A6 20 C0 D0 C1 F6 20 B8 F8 C7 D4 21
+R:3E 3E 20 46 61 69 6C 65 64 20 74 6F 20 52 65 61 64 20 49 6E 66 6F 2E 2E 21
+
+// Contributor: @Dastgir Pojee
+//F:¿öÇÁ ÀÌ¿ë
+//R:Warp By,
+//Actual Translation: Warp Using
+F:BF F6 C7 C1 20 C0 CC BF EB
+R:57 61 72 70 20 42 79 2C 00
+
+// Contributor: @Dastgir Pojee
+//F:NPC Å¬¸¯
+//R:ClickNPC
+F:4E 50 43 20 C5 AC B8 AF
+R:43 6C 69 63 6B 4E 50 43
+
+// Contributor: @Dastgir Pojee
+//F:Npc ÀÌµ¿¼­ºñ½º ÀÌ¿ë!
+//R:Npc Use Warp Service
+F:4E 70 63 20 C0 CC B5 BF BC AD BA F1 BD BA 20 C0 CC BF EB 21
+R:4E 70 63 20 55 73 65 20 57 61 72 70 20 53 65 72 76 69 63 65
+
+// Contributor: @Dastgir Pojee
+//F:%s ÀÌµ¿ Å¬¸¯
+//R:%s MoveClick
+F:25 73 20 C0 CC B5 BF 20 C5 AC B8 AF
+R:25 73 20 4D 6F 76 65 43 6C 69 63 6B
+
+// Contributor: @Dastgir Pojee
+//F:%s ÀÌµ¿
+//R:%s Move
+F:25 73 20 C0 CC B5 BF
+R:25 73 20 4D 6F 76 65
+
+// Contributor: @Dastgir Pojee
+//F:Npc ÀÌµ¿ ¼­ºñ½º ÀÌ¿ë
+//R:Npc Warp Service....
+F:4E 70 63 20 C0 CC B5 BF 20 BC AD BA F1 BD BA 20 C0 CC BF EB
+R:4E 70 63 20 57 61 72 70 20 53 65 72 76 69 63 65 2E 2E 2E 2E
+
+// Contributor: @Dastgir Pojee
+//F:¸ñÇ¥   : %s(%s).ÀÏ¹Ý....º¸½º
+//R:Name   : %s(%s).Norm....Boss
+F:B8 F1 C7 A5 20 20 20 3A 20 25 73 28 25 73 29 00 C0 CF B9 DD 00 00 00 00 BA B8 BD BA
+R:4E 61 6D 65 20 20 20 3A 20 25 73 28 25 73 29 00 4E 6F 72 6D 00 00 00 00 42 6F 73 73
+
+// Contributor: @Dastgir Pojee
+//F:¸ñÇ¥   : %s(%d, %d)
+//R:Name   : %s(%d, %d)
+F:B8 F1 C7 A5 20 20 20 3A 20 25 73 28 25 64 2C 20 25 64 29
+R:4E 61 6D 65 20 20 20 3A 20 25 73 28 25 64 2C 20 25 64 29
